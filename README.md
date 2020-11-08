@@ -1,7 +1,7 @@
 # Workout_Tracker
 
  ## Description 
- The workout tracker is a fitness app that lets users input a new exercise to their new fitness plan, add exercises to their previous workout plan and also to be able to view the combined weight of multiple exercises on their status page. The user is also able to track the name, type, weight, sets, reps and duration of the exercise. 
+ The workout tracker is a fitness app that lets users input a new exercise to their new fitness plan, add exercises to their previous workout plan and also to be able to view the combined weight of multiple exercises on their status page. In this app, the user is able to pick from a drop down menu of a resistance workout or cardio workout and customize the name, distance and duration. The user is also able to track the name, type, weight, sets, reps and duration of the exercise. 
 
 ## Process
  In this workout tracker assignment, I had to create the Mongo database with Mongoose schema and handle routes with Express. The front end code of the workout tracker was provided, so it was nice to see the completed fitness app come together at the end.
@@ -44,7 +44,7 @@ The following platforms were required to build this website:
 
 ## Deployed Link
 
-* [See Live Site](https://shrouded-stream-56897.herokuapp.com/)
+* [See Live Site](https://warm-coast-71840.herokuapp.com/?id=5fa76698d4a80200179c6c47)
  ## Authors
 
 * **Kelly Kim** 
