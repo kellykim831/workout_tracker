@@ -2,73 +2,58 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const transactionSchema = new Schema({
-  name: {
-    type: String,
-    trim: true,
-    required: "Enter a name for transaction"
-  },
-  value: {
-    type: Number,
-    required: "Enter an amount"
-  },
-  date: {
-    type: Date,
-    default: Date.now
-  }
-});
-
-const Transaction = mongoose.model("Transaction", transactionSchema);
-
-module.exports = Transaction;
-
-
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
 const workoutSchema = new Schema({
   day: {
-    type: Date,
-  },
-  totalDuration: {
-    type: Number
+    type: Number,
+    default: Date.now
+
   },
   exercises: [
     {
       type: {
         type: String,
-        required: "Choose an exercise type."
+        trim: true,
+        required: "Enter the exercise of your choice"
       },
       name: {
         type: String,
-        required: "Choose an exercise."
+        trim: true,
+        required: "Enter the exercise name"
       },
       duration: {
         type: Number,
-        required: "Choose an exercise duration."
-      },
-      distance: {
-        type: Number,
+        required: "Enter the minutes for your exercise duration"
       },
       weight: {
-        type: Number,
+        type: Number
       },
       reps: {
-        type: Number,
+        type: Number
       },
       sets: {
-        type: Number,
+        type: Number
       },
+      distance: {
+        type: Number
+      }
     }
   ]
-})
+},
 
-workoutSchema.methods.getTotalDuration = function() {
-  this.totalDuration = this.exercises.reduce(function(accum, val) {
-    return accum + val.duration
-  }, 0)
-}
+
+  {
+    toJSON: {
+      virtuals: true
+    }
+  }
+);
+
+workoutSchema.virtual("totalDuration").get(function () {
+  return this.exercises.reduce((total, exercise) => {
+    return total + exercise.duration;
+  }, 0);
+});
 
 const Workout = mongoose.model("Workout", workoutSchema);
 
-module.exports = Workout;
+module.exports = Workout; 
