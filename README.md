@@ -14,7 +14,7 @@
  ![image](./public/assets/apiRoute1.png)
  
  2nd part of the api route code:
- ![image](./public/assets/apiroute2.png)
+ ![image](./public/assets/apiRoute2.png)
 
  ## Installation
  You will need VS code and the dependencies are Express, Mongoose Schema and Mongo database.
