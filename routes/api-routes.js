@@ -32,4 +32,17 @@ router.get("/api/workouts/range", (req, res) => {
 
     })
 });
-// 
+// Route for continuing the last workout
+router.get("/api/workouts/:id", (req, res) => {
+
+  const { id } = req.params;
+  db.Workout.findOne({
+    _id: id,
+  }).then(dbWorkout => {
+    res.json(dbWorkout);
+  })
+    .catch(err => {
+      res.status(400).json
+    })
+});
+
