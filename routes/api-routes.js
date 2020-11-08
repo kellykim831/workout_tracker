@@ -60,3 +60,15 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
       res.json(err);
     });
 
+  // update your workouts
+  function fitnessUpdate(exercises) {
+    db.Workout.findByIdAndUpdate(id, { exercises: exercises }, function (err, doc) {
+      if (err) {
+        console.log(err)
+      }
+    })
+  }
+});
+
+module.exports = router;
+
