@@ -48,4 +48,15 @@ router.get("/api/workouts/:id", (req, res) => {
 router.put("/api/workouts/:id", ({ body, params }, res) => {
   const id = params.id;
   let savedWorkouts = [];
+  // Saves all of the exercises
+  db.Workout.find({ _id: id })
+    .then(dbWorkout => {
+      savedWorkouts = dbWorkout[0].exercises;
+      res.json(savedWorkouts);
+      let allWorkouts = [...savedWorkouts, body];
+      fitnessUpdate(allWorkouts);
+    })
+    .catch(err => {
+      res.json(err);
+    });
 
