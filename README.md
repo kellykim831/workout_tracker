@@ -1,33 +1,26 @@
 # Workout_Tracker
 
  ## Description 
- The Node Express Handlebars assignment was to create a burger application logger with MySQL, Node, Express, Handlebars and a homemade ORM. The MVC design pattern was followed and I needed to use Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
+ The workout tracker is a fitness app that lets users input a new exercise to their new fitness plan, add exercises to their previous workout plan and also to be able to view the combined weight of multiple exercises on their status page. The user is also able to track the name, type, weight, sets, reps and duration of the exercise. 
 
 ## Process
-  This was an extremely tedious process set up! The first step was to set up several folders. Here is the list: App Setup, DB Setup, Config Setup, Model Setup, Controller Setup and the View Setup. The next step is to install node and the dependencies were Express, Express handlebars and MySql. Please see below for some snippets:
+ In this workout tracker assignment, I had to create the Mongo database with Mongoose schema and handle routes with Express. The front end code of the workout tracker was provided, so it was nice to see the completed fitness app come together at the end.
 
+ Here is a Gif of the workout tracker in action:
 
- Here is a Gif of My Eat Da Burger App that got generated from Git Bash:
-
- ![alttext](Hamburger.gif)
+ ![alttext](./public/assets/workouttracker.gif)
  
- Snippet of the app:
- ![image](hamburger1.png)
+ Snippet of the api route code:
+ ![image](./public/assets/apiRoute1.png)
  
- Bottom part of the app:
- ![image](hamburger2.png)
- 
- Snippet of the terminal generating results:
- ![image](hamburgercode.png)
- 
-  Snippet of my controller.js code:
- ![image](hamburgercode2.png)
+ 2nd part of the api route code:
+ ![image](./public/assets/apiroute2.png)
 
  ## Installation
- You will need VS code and the dependencies are Express, Express-handlebars and MySql.
+ You will need VS code and the dependencies are Express, Mongoose Schema and Mongo database.
  
  ## Usage 
-Eat-Da-Burger is a restaurant app that lets users input the names of burgers they'd like to eat. Whenever a user submits a burger's name, the app will display the burger on the right side of the page, and the burgers listed on the left side are waiting to be devoured. Each burger either has a "Get in my Belly!" button or an "Eat it Again!" button along with a "Delete!" button. The app will store every burger in a database, whether devoured or not.
+ A consumer will be able to reach their fitness goals more quickly when they track their workout progress.
 
 
 ### Installing/Technology Used
@@ -38,16 +31,16 @@ The following platforms were required to build this website:
 2) GitBash/Terminal
 3) GitLab
 4) GitHub
-5) Express
-6) Express-Handlebars
-7) MySQL
+5) Mongo database
+6) Mongoose Schema
+7) Express
 
 ## Built With
 
-* [Node.js](https://nodejs.dev/learn/the-package-json-guide)
-* [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
+* [Node.js](https://nodejs.dev/learnthe-package-json-guide)
 * [Express](http://expressjs.com/)
-* [MySQL Workbench](https://www.mysql.com/products/workbench/)
+* [Mongoose Schema](https://mongoosejs.com/docs/guide.html)
+* [Mongo db](https://www.mongodb.com/)
 
 ## Deployed Link
 
