@@ -45,4 +45,7 @@ router.get("/api/workouts/:id", (req, res) => {
       res.status(400).json
     })
 });
+router.put("/api/workouts/:id", ({ body, params }, res) => {
+  const id = params.id;
+  let savedWorkouts = [];
 
