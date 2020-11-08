@@ -21,3 +21,15 @@ router.post("/api/workouts", ({ body }, res) => {
       res.json(err);
     });
 });
+// Route for getting workouts in range
+router.get("/api/workouts/range", (req, res) => {
+  db.Workout.find()
+    .then(dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+
+    })
+});
+// 
